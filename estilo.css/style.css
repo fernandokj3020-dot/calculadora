@@ -1,0 +1,139 @@
+/* Estilo general para toda la página y centrar la calculadora */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #bad9ff;
+    color: #2d3748;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Contenedor principal de la calculadora (la tarjeta blanca) */
+.calculadora {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(30, 58, 138, 0.08);
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #dbeafe;
+}
+
+/* Título principal de la calculadora */
+.encabezado h1 {
+    text-align: center;
+    color: #1e40af;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Cada bloque que agrupa una etiqueta y su campo de número */
+.campo {
+    margin-bottom: 1.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Texto de la etiqueta de cada campo */
+.campo label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #475569;
+}
+
+/* Estilo para los números decorativos dentro de la etiqueta */
+.campo .numero {
+    display: inline-block;
+    background-color: #dbeafe;
+    color: #1d4ed8;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-right: 4px;
+}
+
+/* Cuadro de texto donde se ingresan los números */
+.campo input[type="number"] {
+    padding: 0.75rem;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    background-color: #f8fafc;
+}
+
+/* Efecto al hacer clic dentro del cuadro de número */
+.campo input[type="number"]:focus {
+    border-color: #2563eb;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Contenedor del botón de envío */
+.boton-cont {
+    margin-top: 1.5rem;
+}
+
+/* Estilo del botón para realizar el cálculo */
+.boton-cont input[type="submit"] {
+    width: 100%;
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+.boton-cont input[type="submit"]:hover {
+    background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+}
+
+/* Panel donde se muestran los resultados */
+.panel {
+    margin-top: 1.5rem;
+    background-color: #f0f7ff;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #bae6fd;
+}
+
+/* Título dentro del panel de resultados */
+.panel h3 {
+    font-size: 0.95rem;
+    color: #0369a1;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    text-align: center;
+}
+
+/* Lista que organiza cada resultado de la operación */
+.lista-resultados {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Cada línea o elemento individual dentro de la lista de resultados */
+.lista-resultados li {
+    padding: 0.4rem 0;
+    border-bottom: 1px solid #e0f2fe;
+    font-size: 0.95rem;
+    color: #334155;
+}
+
+/* Estilo para los mensajes de error (cuando hay datos inválidos) */
+.error {
+    color: #dc2626;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
